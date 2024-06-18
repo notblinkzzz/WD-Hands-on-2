@@ -1,0 +1,141 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+@font-face {
+    font-family: main-font;
+    src: url(../fonts/QuartzoBold-W9lv.ttf);
+}
+
+@font-face {
+    font-family: sub-font;
+    src: url(../fonts/SocialScienceSans_PERSONAL_USE_ONLY.otf);
+}
+
+
+* {
+    box-sizing: border-box;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+}
+
+:root {
+    --bg-color: ;
+    --main-color: ;
+    --text-color: ;
+    --second-text-color: ;
+}
+
+body {
+    background-color: grey;
+    color: white;
+    width: 100dvw;
+    height: 100dvh;
+    overflow: hidden;
+
+}
+.hero {
+    width: 100dvw;
+    position: relative;
+
+    & .wallpaper {
+        position: relative;
+        width: 100dvw;
+
+        & .bottom-layer, & .top-layer{
+            position: absolute;
+            top:-10rem;
+        }
+
+        &  .bottom-layer{
+            z-index: -3;
+        }
+        &  .top-layer{
+            z-index: 1;
+            /* filter: drop-shadow(0 0 5px #2dd9fe); */
+        }
+        & img {
+            width: 100%;
+        }
+
+        & h1 {
+            display: flex;
+            width: 100%;
+            justify-content: center;
+            position: absolute;
+            top: 5rem;
+            letter-spacing: .5rem;
+            padding-left: .7rem;
+            word-spacing: -3rem;
+            font-family: sub-font;
+            font-weight: 200;
+        }
+        & .title-lower {
+            color: rgba(0, 0, 0, 0.6);
+            font-size: 16rem;
+            text-shadow: rgba(0, 0, 0, 0.25) 2px 0 10px;
+        }
+        & .title-top {
+            color: white;
+            font-size: 15.5rem;
+            z-index: 2;
+            text-shadow: #2dd9fe 2px 0 10px;
+        }
+    }
+    & .one {
+        position: absolute;
+        width: 80dvw;
+        height: .5vh;
+        background-color: #2dd8fe50;
+        border-radius: 5px;
+        left: 12rem;
+        top: 22rem;
+    }
+    
+    & .two {
+        position: absolute;
+        width: 80dvw;
+        height: .5vh;
+        background-color: rgba(255, 255, 255, 0.5);
+        border-radius: 5px;
+        left: 12rem;
+        top: 22.1rem;
+        z-index: -1;
+    }
+    & .three {
+        position: absolute;
+        width: 80dvw;
+        height: .5vh;
+        background-color: rgba(0, 0, 0, 0.25);
+        border-radius: 5px;
+        left: 12rem;
+        top: 22.3rem;
+        z-index: -2;
+    }
+    & .card-first, .card-second {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        width: fit-content;
+        height: fit-content;
+        text-align: center;
+        font-family: 'Poppins', sans-serif;
+        padding: 1.6rem 2.5rem;
+        gap: .5rem;
+        box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+        color: rgba(0, 0, 0, 0.6);
+        border-radius: 20px;
+
+    }
+
+    & .card-first {
+        top: 26rem;
+        left: 23rem;
+        gap: 1rem;
+    }
+    & .card-second {
+        right: 8rem;
+        top: 35.5rem;
+    }
+}
