@@ -84,16 +84,18 @@ body {
 }
 
 .card {
+    display: flex;
     position: absolute;
-    left: 39rem;
-    top: 2rem;
+    right: 20rem;
+    top: 8rem;
     padding: 1.5rem 3rem;
     background: rgba(118, 118, 118, 0.5);
     box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
     height: fit-content;
     border-radius: 10px;
-
-
+    z-index: 2;
+    cursor: pointer;
+    transition: .3s;
 
 
     & .contents-div {
@@ -102,12 +104,12 @@ body {
         gap: 1rem;
         width: fit-content;
 
-        & .contents, span{
+        & .contents, span {
             font-family: hero-academia-subtitle;
             font-size: 1.3rem;
             letter-spacing: .3rem;
         }
-        & span{
+        & span {
             font-weight: 900;
             color: #eedc30;
             text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
@@ -116,6 +118,9 @@ body {
             color: #ffffff;
             text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
         }
-
     }
+}
+.card:hover {
+    filter: drop-shadow(0 0 5px red);
+    transform: scale(1.1);
 }

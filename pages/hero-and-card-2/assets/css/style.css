@@ -55,11 +55,8 @@ body {
     & .top-bg {
         z-index: 1;
         filter: drop-shadow(0 0 8px white);
-
     }
-
 }
-
 
 .card-1 {
     display: flex;
@@ -72,7 +69,8 @@ body {
     background-color: #a4a4a4;
     border: 5px solid black;
     padding: 1rem 1rem;
-    z-index: -1;
+    z-index: 1;
+    cursor: pointer;
 
     & .top {
         position: absolute;
@@ -147,6 +145,12 @@ body {
                 }
             }
         }
+}
+.card-1:hover {
+    transition: 1s;
+    transform: rotateX(90deg);
+    transform: rotateY(360deg);
+    border-color: rgba(255, 255, 255, 0.49);
 }
 
 .text-area-1 {
@@ -301,6 +305,7 @@ body {
             display: flex;
             height: 10%;
             background-color: white;
+            cursor: pointer;
 
             & p {
                 visibility: hidden;
@@ -334,4 +339,14 @@ body {
             }
         }
         }
-    }
+}
+
+.card-2:hover .bar{
+    transition: .6s;
+    background-color: yellow;
+}
+.content-div .bar:hover {
+    color: red;
+    background-color: white;
+    transition: .6s;
+}
