@@ -59,7 +59,7 @@
 <!-- The following are just sample -->
 This project is about creating numerous different styles of hero pages with cards, that includes static and animated cards. The purpose of this Project is to learn the things about how to create unique kinds of hero pages and cards.
 
-Some of the key components of my websites are the 3D effects. I used perspective to create a 3D effect on the Title of my 5th design. I also used keyframes for my animations on the flickering effects of my 3rd design, and combined it with a neon color and shadow.
+Some of the key components of my websites are the 3D effects. I used perspective to create a 3D effect on the Title of my 5th design. I also used keyframes for the animations on the flickering effects of my 3rd design and for some reason, its jittery on Google Chrome but smooth on Microsoft Edge, and Opera GX, and I combined it with a neon color and shadow.
 
 The technologies that I used were HTML and CSS. I used HTML for the contents and structure of the website and CSS to design the contents in order for it to look good.
 
@@ -73,6 +73,9 @@ The technologies that I used were HTML and CSS. I used HTML for the contents and
 - Flickering Effects
 - Hover Effects
 - Visible when hovered
+
+### Deployment Link
+https://notblinkzzz.github.io/WD-Hands-on-2/
 
 ### Technology
 <!-- TODO: List of Technology Used -->
