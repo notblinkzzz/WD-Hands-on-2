@@ -23,14 +23,6 @@
     padding: 0;
 }
 
-:root {
-    --bg-color: ;
-    --main-color: ;
-    --text-color: #eedc30;
-    --second-text-color:rgba(255, 255, 255, 0.53);
-}
-
-
 body {
     background-color: white;
     color: white;
@@ -52,6 +44,7 @@ body {
     & .background-img {
         z-index: -1;
     }
+
     & .top-bg {
         z-index: 1;
         filter: drop-shadow(0 0 8px white);
@@ -313,9 +306,7 @@ body {
         }
 
         & .intelligence-div {
-            & .text {
 
-            }
             & .bar {
                 width: 19%;
             }
@@ -326,9 +317,7 @@ body {
             }
         }
         & .popularity-div {
-            & .text {
 
-            }
             & .bar {
                 width: 6%;
             }
@@ -345,6 +334,7 @@ body {
     transition: .6s;
     background-color: yellow;
 }
+
 .content-div .bar:hover {
     color: red;
     background-color: white;
