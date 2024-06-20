@@ -1,0 +1,279 @@
+@font-face {
+    font-family: matrix;
+    src: url(../fonts/matrix.ttf);
+}
+
+* {
+    box-sizing: border-box;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: white;
+    color: white;
+    width: 100dvw;
+    height: 100dvh;
+    overflow: hidden;
+    font-family: matrix;
+}
+.background {
+    position:absolute;
+    z-index: -1;
+    object-fit:cover;
+    width: 100dvw;
+    height: 100dvh;
+}
+.title {
+    display: flex;
+    width: 100dvw;
+    height: fit-content;
+    perspective: 30rem;
+    justify-content: center;
+
+    & h1 {
+        font-size: 15rem;
+        padding-left: 2rem;
+        font-family: matrix;
+        letter-spacing: 2rem;
+        transform: rotateX(20deg);
+        color: #77cef2;
+        box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+        -webkit-text-stroke-width: 6px;
+        -webkit-text-stroke-color: black;
+    }
+}
+.card-div {
+    padding-top: 2rem;
+    padding-left: 15rem;
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 68.9%;
+    cursor: pointer;
+    perspective: 1000px;
+
+    & .outer-card {
+        position: absolute;
+        border-top: .4rem #343854 solid;
+        border-left: .4rem #43465e solid;
+        border-bottom: .4rem #5f6887 solid;
+        border-right: .4rem #7f88a2 solid;
+        width: 20rem;
+        height: 28.3rem;
+        transition: transform 1.2s;
+        transform-style: preserve-3d;
+
+        & .back-card {
+            position: absolute;
+            height: 465px;
+            width: 335px;
+            top: -.4rem;
+            left: -.4rem;
+            z-index: -1;
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+            transform: rotateY(180deg);
+        }
+
+        & .inner-card {
+            height: 100%;
+            width: 100%;
+            padding: .5rem;
+            background: linear-gradient( rgba(203,151,66,0.5), rgba(214,187,132, 0.5) ), url(../img/mona-eendra-vC8wj_Kphak-unsplash.jpg);
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+
+            & .inner-img {
+                height: 100%;
+                width: 100%;
+                object-fit: contain;
+            }
+
+            & .title-card {
+                display: flex;
+                width: 100%;
+                height: 8%;
+                font-size: 1.2rem;
+                padding: .1rem;
+                align-items: center;
+                gap: .5rem;
+                border-top: .3rem #efc591 solid;
+                border-left: .3rem #f6cb9e solid;
+                border-bottom: .3rem #af864f solid;
+                border-right: .3rem #866429 solid;
+
+                & .attribute-logo {
+                    width: 25px;
+                    height: 25px;
+                }
+            }
+            & .monster-level-card {
+                display: flex;
+                width: 100%;
+                height: 6.5%;
+
+                & .filler-left {
+                    width: 40%;
+                    height: 100%;
+                }
+                & .level-right {
+                    display: flex;
+                    justify-content: flex-end;
+                    padding: .5rem 1.1rem;
+                    align-items: center;
+                    width: 60%;
+                    gap: .15rem;
+                    & img{
+                        width: 20px;
+                        height: 20px;
+                    }
+                }
+            }
+            & .img-card-div {
+                width: 100%;
+                height: 58%;
+                padding: 0 1rem;
+
+                & .img-card-inner {
+                    width: 100%;
+                    height: 100%;
+                    border-top: .3rem #868a9b solid;
+                    border-left: .3rem #555149 solid;
+                    border-bottom: .3rem #4a5059 solid;
+                    border-right: .3rem #57575b solid;
+
+                    & .dragon {
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+            }
+            & .series-card {
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+                padding: 0 1.2rem;
+                width: 100%;
+                height: 2.5%;
+                font-size: .7rem;
+                color: black;
+
+                & span {
+                    font-weight: 600;
+                }
+            }
+        }
+        & .details-card {
+            width: 100%;
+            height: 22.9%;
+            padding: .5rem .4rem;
+            background-color: #f2e5d2;
+            border-top: .3rem #9e5f30 solid;
+            border-left: .3rem #aa6c1b solid;
+            border-bottom: .3rem #ba6f2d solid;
+            border-right: .3rem #cf8641  solid;
+
+            & .type-card {
+                display: flex;
+                align-items: center;
+                width: 100%;
+                height: 16%;
+
+                & p {
+                    font-size: .75rem;
+                }
+
+            }
+
+            & .details {
+                width: 100%;
+                height: 37%;
+
+                & p{
+                    font-size: .56rem;
+                }
+            }
+
+            & .filler {
+                width: 100%;
+                height: 33.5%;
+
+            }
+
+            & .line {
+                width: 100%;
+                height: 2px;
+                background-color: #6b5c48;
+            }
+
+            & .atk-def {
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+                width: 100%;
+                height: 13%;
+                padding-top: .3rem;
+                gap: .8rem;
+                & p, span {
+                    font-size: .7rem;
+                    letter-spacing: .1rem;
+                }
+
+                & span {
+                    font-weight: 500;
+                }
+            }
+        }
+        & .maker-card {
+            display: flex;
+            width: 100%;
+            height: 4%;
+
+            & h5 {
+                    font-size: .6rem;
+            }
+
+            & .number {
+                width: 45%;
+                display: flex;
+                align-items: center;
+                color: black;
+
+                & h5 {
+                    padding-top: .1rem;
+                    font-weight: 600;
+                }
+            }
+
+            & .year {
+                width: 55%;
+                display: flex;
+                align-items: center;
+                gap: .5rem;
+                letter-spacing: .1rem;
+                padding-left: .5rem;
+                color: black;
+                & p {
+                    font-size: .6rem;
+                }
+                & h5 {
+                    padding-top: .1rem;
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+
+    & .outer-card:hover .back-card{
+        transform: rotateY(180deg);
+    }
+    & .outer-card:hover {
+        transform: rotateY(180deg);
+    }
+    & p{
+        font-family: matrix;
+        color: black;
+    }
+}

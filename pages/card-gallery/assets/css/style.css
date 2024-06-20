@@ -1,0 +1,541 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@font-face {
+    font-family: hero-academia-title;
+    src: url(../fonts/KOMIKAH_.ttf);
+}
+@font-face {
+    font-family: hero-academia-title-bold;
+    src: url(../fonts/KOMIKAHB.ttf);
+}
+@font-face {
+    font-family: hero-academia-subtitle;
+    src: url(../fonts/chinrg__.ttf);
+}
+@font-face {
+    font-family: hero-academia-inner;
+    src: url(../fonts/ComicRelief.ttf);
+}
+@font-face {
+    font-family: one-punch;
+    src: url(../fonts/eastwest.ttf);
+}
+@font-face {
+    font-family: one-punch-norm;
+    src: url(../fonts/roman.ttf);
+}
+@font-face {
+    font-family: one-punch-bold-italic;
+    src: url(../fonts/bolditalic.ttf);
+}
+@font-face {
+    font-family: one-punch-italic;
+    src: url(../fonts/italic.ttf);
+}
+@font-face {
+    font-family: matrix;
+    src: url(../fonts/matrix.ttf);
+}
+
+* {
+    box-sizing: border-box;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: white;
+    color: black;
+    width: 100dvw;
+    height: 150dvh;
+    overflow-x: hidden;
+}
+section {
+    width: 100vw;
+    padding: 1rem 5vw;
+    display: flex;
+    gap: 1rem;
+    align-items: flex-end;
+}
+.top-card-section {
+    display: flex;
+    padding-top: 7rem;
+
+    & .card-two-h3{
+        padding-left: 25rem;
+    }
+    & .card-three-h3{
+        padding-left: 25rem;
+    }
+}
+.bottom-card-section {
+    display: flex;
+    position: absolute;
+    top: 38rem;
+
+    & .card-two-h3{
+        padding-left: 25rem;
+    }
+    & .card-three-h3{
+        padding-left: 25rem;
+    }
+}
+
+
+.card-one {
+    display: flex;
+    position: absolute;
+    left: 5vw;
+    padding: 1.5rem 3rem;
+    background: rgba(118, 118, 118, 0.5);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+    height: fit-content;
+    border-radius: 10px;
+    z-index: 2;
+    cursor: pointer;
+    transition: .3s;
+
+    & .contents-div {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        width: fit-content;
+
+        & .contents, span {
+            font-family: hero-academia-subtitle;
+            font-size: 1.3rem;
+            letter-spacing: .3rem;
+        }
+        & span {
+            font-weight: 900;
+            color: #eedc30;
+            text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+        }
+        & .contents {
+            color: #ffffff;
+            text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+        }
+    }
+
+}
+.card-one:hover {
+    filter: drop-shadow(0 0 5px red);
+    transform: scale(1.1);
+}
+
+.card-two {
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    width: 22vw;
+    left: 35rem;
+    margin-top: 2rem;
+    height: fit-content;
+    background-color: #a4a4a4;
+    border: 5px solid black;
+    padding: 1rem 0rem 1rem 1rem; /*top right bot left*/
+
+    & .top {
+        position: absolute;
+        top: -3.5rem;
+        left: -4.5rem;
+
+        & h1 {
+            font-family: one-punch-norm;
+            font-size: 2.5rem;
+            letter-spacing: .5rem;
+            -webkit-text-stroke: 1px black;
+            color: white;
+            text-shadow:
+                3px 3px 0 #000,
+              -1px -1px 0 #000,
+               1px -1px 0 #000,
+               -1px 1px 0 #000,
+                1px 1px 0 #000;
+         }
+    }
+
+    & .content-div {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        background-color: #a4a4a4;
+        gap: .8rem;
+
+        & p {
+            font-weight: 800;
+            font-size: 1rem;
+            text-transform: uppercase;
+            color: black;
+        }
+
+        & .stamina-div, .justice-div, .endurance-div,
+        .power-div, .effectiveness-div, .fighting-div,
+        .intelligence-div, .popularity-div {
+            display: flex;
+            height: fit-content;
+            width: 100%;
+            gap: .5rem;
+        }
+
+        & .text{
+            width: 40%;
+            text-align: end;
+        }
+        & .bar {
+            border: 2px black solid;
+            width: 45%;
+            display: flex;
+            height: 10%;
+            background-color: white;
+            cursor: pointer;
+
+            & p {
+                visibility: hidden;
+            }
+        }
+
+        & .intelligence-div {
+
+            & .bar {
+                width: 19%;
+            }
+            & .int-perc {
+                display: flex;
+                width: 36.5%;
+                justify-content: flex-end;
+            }
+        }
+        & .popularity-div {
+
+            & .bar {
+                width: 6%;
+            }
+            & .pop-perc {
+                display: flex;
+                width: 49.5%;
+                justify-content: flex-end;
+            }
+        }
+        }
+}
+.card-two:hover .bar{
+    transition: .6s;
+    background-color: yellow;
+}
+.card-two .content-div .bar:hover {
+    color: red;
+    background-color: white;
+    transition: .6s;
+}
+
+.card-three {
+    position: absolute;
+    width: fit-content;
+    height: fit-content;
+    left: 65rem;
+    & .card-engine-div {
+        position: relative;
+        background-color: rgba(0, 0, 0, 0.3);
+        padding: .7rem 1rem;
+        border-radius: 5px;
+        cursor: pointer;
+
+        & p {
+            font-size: .8rem;
+            color: #0fa;
+        }
+        & .contents {
+            letter-spacing: .1rem;
+        }
+    }
+    & .card-description-div {
+        bottom: 0;
+        width: 60%;
+
+        & .description {
+            letter-spacing: .3rem;
+            text-align: center;
+        }
+    }
+
+    .card-engine-div:hover {
+
+        transition: 1s;
+        background-color: white;
+
+        & p{
+            color: black;
+        }
+        box-shadow:
+                rgba(0, 255, 170, 0.12) 0px 2px 4px 0px,
+                rgba(0, 255, 170, 0.32) 0px 2px 16px 0px;
+    }
+}
+
+.card-four {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    height: fit-content;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    padding: 1.6rem 2.5rem;
+    gap: .5rem;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+    color: rgba(0, 0, 0, 0.6);
+    border-radius: 20px;
+    top: 42rem;
+    left: 6rem;
+    gap: 1rem;
+    transition: .8s;
+}
+& .card-four:hover {
+    box-shadow: 0px 1px 0px 0px rgba(0,0,0,0.22), 1px 0px 0px 0px rgba(0,0,0,0.22), 1px 2px 0px 0px rgba(0,0,0,0.22), 2px 1px 0px 0px rgba(0,0,0,0.22), 2px 3px 0px 0px rgba(0,0,0,0.22), 3px 2px 0px 0px rgba(0,0,0,0.22), 3px 4px 0px 0px rgba(0,0,0,0.22), 4px 3px 0px 0px rgba(0,0,0,0.22), 4px 5px 0px 0px rgba(0,0,0,0.22), 5px 4px 0px 0px rgba(0,0,0,0.22), 5px 6px 0px 0px rgba(0,0,0,0.22), 6px 5px 0px 0px rgba(0,0,0,0.22), 6px 7px 0px 0px rgba(0,0,0,0.22), 7px 6px 0px 0px rgba(0,0,0,0.22), 7px 8px 0px 0px rgba(0,0,0,0.22), 8px 7px 0px 0px rgba(0,0,0,0.22);
+    color: black;
+}
+
+
+.card-five {
+    position: absolute;
+    left: 30rem;
+    top: 42rem;
+    width: 100dvw;
+    height: 50dvh;
+    & .card-div {
+        padding-top: 0rem;
+        padding-left: 5rem;
+        position: relative;
+        display: flex;
+        width: 100%;
+        height: 68.9%;
+        cursor: pointer;
+        perspective: 1000px;
+
+        & .outer-card {
+            position: absolute;
+            border-top: .4rem #343854 solid;
+            border-left: .4rem #43465e solid;
+            border-bottom: .4rem #5f6887 solid;
+            border-right: .4rem #7f88a2 solid;
+            width: 20rem;
+            height: 28.3rem;
+            transition: transform 1.2s;
+            transform-style: preserve-3d;
+
+            & .back-card {
+                position: absolute;
+                height: 465px;
+                width: 335px;
+                top: -.4rem;
+                left: -.4rem;
+                z-index: -1;
+                -webkit-backface-visibility: hidden;
+                backface-visibility: hidden;
+                transform: rotateY(180deg);
+            }
+
+            & .inner-card {
+                height: 100%;
+                width: 100%;
+                padding: .5rem;
+                background: linear-gradient( rgba(203,151,66,0.5), rgba(214,187,132, 0.5) ), url(../img/mona-eendra-vC8wj_Kphak-unsplash.jpg);
+                -webkit-backface-visibility: hidden;
+                backface-visibility: hidden;
+
+                & .inner-img {
+                    height: 100%;
+                    width: 100%;
+                    object-fit: contain;
+                }
+
+                & .title-card {
+                    display: flex;
+                    width: 100%;
+                    height: 8%;
+                    font-size: 1.2rem;
+                    padding: .1rem;
+                    align-items: center;
+                    gap: .5rem;
+                    border-top: .3rem #efc591 solid;
+                    border-left: .3rem #f6cb9e solid;
+                    border-bottom: .3rem #af864f solid;
+                    border-right: .3rem #866429 solid;
+    
+                    & .attribute-logo {
+                        width: 25px;
+                        height: 25px;
+                    }
+                }
+                & .monster-level-card {
+                    display: flex;
+                    width: 100%;
+                    height: 6.5%;
+    
+                    & .filler-left {
+                        width: 40%;
+                        height: 100%;
+                    }
+                    & .level-right {
+                        display: flex;
+                        justify-content: flex-end;
+                        padding: .5rem 1.1rem;
+                        align-items: center;
+                        width: 60%;
+                        gap: .15rem;
+                        & img{
+                            width: 20px;
+                            height: 20px;
+                        }
+                    }
+                }
+                & .img-card-div {
+                    width: 100%;
+                    height: 58%;
+                    padding: 0 1rem;
+    
+                    & .img-card-inner {
+                        width: 100%;
+                        height: 100%;
+                        border-top: .3rem #868a9b solid;
+                        border-left: .3rem #555149 solid;
+                        border-bottom: .3rem #4a5059 solid;
+                        border-right: .3rem #57575b solid;
+    
+                        & .dragon {
+                            width: 100%;
+                            height: 100%;
+                        }
+                    }
+                }
+                & .series-card {
+                    display: flex;
+                    justify-content: flex-end;
+                    align-items: center;
+                    padding: 0 1.2rem;
+                    width: 100%;
+                    height: 2.5%;
+                    font-size: .7rem;
+                    color: black;
+    
+                    & span {
+                        font-weight: 600;
+                    }
+                }
+            }
+            & .details-card {
+                width: 100%;
+                height: 22.9%;
+                padding: .5rem .4rem;
+                background-color: #f2e5d2;
+                border-top: .3rem #9e5f30 solid;
+                border-left: .3rem #aa6c1b solid;
+                border-bottom: .3rem #ba6f2d solid;
+                border-right: .3rem #cf8641  solid;
+    
+                & .type-card {
+                    display: flex;
+                    align-items: center;
+                    width: 100%;
+                    height: 16%;
+    
+                    & p {
+                        font-size: .75rem;
+                    }
+    
+                }
+    
+                & .details {
+                    width: 100%;
+                    height: 37%;
+    
+                    & p{
+                        font-size: .56rem;
+                    }
+                }
+    
+                & .filler {
+                    width: 100%;
+                    height: 33.5%;
+    
+                }
+    
+                & .line {
+                    width: 100%;
+                    height: 2px;
+                    background-color: #6b5c48;
+                }
+    
+                & .atk-def {
+                    display: flex;
+                    justify-content: flex-end;
+                    align-items: center;
+                    width: 100%;
+                    height: 13%;
+                    padding-top: .3rem;
+                    gap: .8rem;
+                    & p, span {
+                        font-size: .7rem;
+                        letter-spacing: .1rem;
+                    }
+    
+                    & span {
+                        font-weight: 500;
+                    }
+                }
+            }
+            & .maker-card {
+                display: flex;
+                width: 100%;
+                height: 4%;
+    
+                & h5 {
+                        font-size: .6rem;
+                }
+    
+                & .number {
+                    width: 45%;
+                    display: flex;
+                    align-items: center;
+                    color: black;
+    
+                    & h5 {
+                        padding-top: .1rem;
+                        font-weight: 600;
+                    }
+                }
+    
+                & .year {
+                    width: 55%;
+                    display: flex;
+                    align-items: center;
+                    gap: .5rem;
+                    letter-spacing: .1rem;
+                    padding-left: .5rem;
+                    color: black;
+                    & p {
+                        font-size: .6rem;
+                    }
+                    & h5 {
+                        padding-top: .1rem;
+                        font-weight: 600;
+                    }
+                }
+            }
+        }
+    
+        & .outer-card:hover .back-card{
+            transform: rotateY(180deg);
+        }
+        & .outer-card:hover {
+            transform: rotateY(180deg);
+        }
+        & p{
+            font-family: matrix;
+            color: black;
+        }
+    }
+}
+

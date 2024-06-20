@@ -15,6 +15,22 @@
     font-family: hero-academia-inner;
     src: url(../fonts/ComicRelief.ttf);
 }
+@font-face {
+    font-family: one-punch;
+    src: url(../fonts/eastwest.ttf);
+}
+@font-face {
+    font-family: one-punch-norm;
+    src: url(../fonts/roman.ttf);
+}
+@font-face {
+    font-family: one-punch-bold-italic;
+    src: url(../fonts/bolditalic.ttf);
+}
+@font-face {
+    font-family: one-punch-italic;
+    src: url(../fonts/italic.ttf);
+}
 
 * {
     box-sizing: border-box;

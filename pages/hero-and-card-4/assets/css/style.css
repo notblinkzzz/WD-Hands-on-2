@@ -126,16 +126,22 @@ body {
         box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
         color: rgba(0, 0, 0, 0.6);
         border-radius: 20px;
-
+        cursor: pointer;
+        z-index: 3;
+        transition: .8s;
     }
 
     & .card-first {
         top: 26rem;
-        left: 23rem;
+        left: 18rem;
         gap: 1rem;
     }
     & .card-second {
         right: 8rem;
-        top: 35.5rem;
+        top: 33rem;
+    }
+    & .card-first:hover, .card-second:hover {
+        box-shadow: 0px 1px 0px 0px rgba(0,0,0,0.22), 1px 0px 0px 0px rgba(0,0,0,0.22), 1px 2px 0px 0px rgba(0,0,0,0.22), 2px 1px 0px 0px rgba(0,0,0,0.22), 2px 3px 0px 0px rgba(0,0,0,0.22), 3px 2px 0px 0px rgba(0,0,0,0.22), 3px 4px 0px 0px rgba(0,0,0,0.22), 4px 3px 0px 0px rgba(0,0,0,0.22), 4px 5px 0px 0px rgba(0,0,0,0.22), 5px 4px 0px 0px rgba(0,0,0,0.22), 5px 6px 0px 0px rgba(0,0,0,0.22), 6px 5px 0px 0px rgba(0,0,0,0.22), 6px 7px 0px 0px rgba(0,0,0,0.22), 7px 6px 0px 0px rgba(0,0,0,0.22), 7px 8px 0px 0px rgba(0,0,0,0.22), 8px 7px 0px 0px rgba(0,0,0,0.22);
+        color: black;
     }
 }
