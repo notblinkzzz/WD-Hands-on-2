@@ -3,7 +3,7 @@
 .primary-nav {
     display: flex;
     color: black;
-    position: absolute;
+    position: fixed;
     width: fit-content;
     padding: 1rem;
     background: #2C3E50;
@@ -21,4 +21,10 @@
         text-decoration: none;
         font-size: 1.5rem;
     }
+}
+
+.primary-nav:hover,
+.primary-nav:hover a {
+    background: #566b81;
+    color: rgba(255, 255, 255, 0.712);
 }
